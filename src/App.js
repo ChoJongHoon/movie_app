@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Movie from "./Movie";
+import "./App.css";
 
 export default class App extends Component {
   state = {
@@ -14,7 +15,7 @@ export default class App extends Component {
         data: { movies }
       }
     } = await axios.get(
-      "https://yts-proxy.now.sh/list_movies.json?sort_by=like_count"
+      "https://yts-proxy.now.sh/list_movies.json?sort_by=download_count"
     );
 
     this.setState({ movies, isLoading: false });
