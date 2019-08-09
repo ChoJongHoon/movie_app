@@ -63,3 +63,9 @@
   margin-right: 10px;
   font-size: 14px;
 }
+
+@media (max-width: 1200px) {
+  .movies .movie {
+    width: 100%;
+  }
+}
