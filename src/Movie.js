@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Movie.css";
+import StarRatings from "react-star-ratings";
 
-const Movie = ({ title, summary, poster, genres }) => {
+const Movie = ({ title, summary, poster, genres, rating }) => {
   return (
     <div className="movie">
       <img src={poster} alt={title} title={title} className="movie__poster" />
@@ -17,6 +18,12 @@ const Movie = ({ title, summary, poster, genres }) => {
             );
           })}
         </div>
+        <StarRatings
+          rating={rating / 2}
+          starRatedColor="#FEB974"
+          starDimension="15px"
+          starSpacing="2px"
+        />
         <p className="movie__summary">{summary}</p>
       </div>
     </div>
@@ -28,7 +35,8 @@ Movie.propTypes = {
   title: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  rating: PropTypes.number.isRequired
 };
 
 export default Movie;

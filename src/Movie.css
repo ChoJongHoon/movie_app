@@ -7,6 +7,7 @@
   margin: 2rem 1rem;
   padding: 1rem;
   box-sizing: border-box;
+  border-radius: 2px;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
@@ -17,8 +18,7 @@
   position: relative;
   top: -2rem;
   display: inline-block;
-  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .movie .movie__data {
@@ -40,6 +40,7 @@
 
 .movie__genres {
   max-width: 100%;
+  margin-bottom: 0.75rem;
 }
 
 .genres__genre {
@@ -49,6 +50,7 @@
 }
 
 .movie__summary {
+  color: #868e96;
   /* 한 줄 자르기 */
   display: inline-block;
   white-space: nowrap;
